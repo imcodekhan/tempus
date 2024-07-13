@@ -121,7 +121,9 @@ const Creation = () => {
                 <ModalBody>
                   <div className="text-blue-950 text-3xl">
                     please save the url and share it with your friends &nbsp;
-                    <div className="bg-green-200 rounded-sm p-2"> {url}</div>
+                    <div className="bg-green-200 rounded-sm p-2">
+                      {location.host + url}
+                    </div>
                   </div>
                 </ModalBody>
                 <ModalFooter>
