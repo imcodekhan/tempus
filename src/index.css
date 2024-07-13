@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #141321 !important;
+  color: white !important;
+  font-family: "Ingrid Darling", cursive !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#root {
+  height: 100%;
+}
