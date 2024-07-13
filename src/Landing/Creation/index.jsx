@@ -5,7 +5,7 @@ import TimeChips from "../../Components/TimeChips";
 import { v4 as uuid } from "uuid";
 import { ref as dbRef, set } from "firebase/database";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import Loader from "../../Components/Loader";
+import seal from "../../assets/seal.png";
 import {
   Button,
   Modal,
@@ -103,7 +103,7 @@ const Creation = () => {
                 <ModalBody>
                   <div className="flex justify-center items-center">
                     <img
-                      src="/src/assets/seal.png"
+                      src={seal}
                       alt="Rotating"
                       className="w-40 h-40 animate-spin duration-700"
                     />

@@ -1,4 +1,6 @@
 import React from "react";
+import seal from "../../assets/seal.png";
+import tempus from "../../assets/tempus.png";
 
 export default function Hero({ descrption }) {
   return (
@@ -6,11 +8,7 @@ export default function Hero({ descrption }) {
       <div className="flex flex-col h-full w-6/12 ">
         <div className=" h-2/4 flex">
           <div className=" w-3/6">
-            <img
-              className="h-full w-full"
-              src="/src/assets/seal.png"
-              alt="seal"
-            />
+            <img className="h-full w-full" src={seal} alt="seal" />
           </div>
           <div className=" w-full text-9xl flex  self-center">
             Welcome to Tempus
@@ -23,11 +21,7 @@ export default function Hero({ descrption }) {
         </div>
       </div>
       <div>
-        <img
-          className="h-full w-full"
-          src="/src/assets/tempus.png"
-          alt="tempus"
-        />
+        <img className="h-full w-full" src={tempus} alt="tempus" />
       </div>
     </div>
   );

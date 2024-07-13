@@ -4,6 +4,7 @@ import { database } from "../firebase";
 import { ref, onValue } from "firebase/database";
 import Loader from "../Components/Loader";
 import Hero from "../Components/Hero";
+import capusle from "../assets/capsule.png";
 
 const Capsule = () => {
   const { id } = useParams();
@@ -80,7 +81,7 @@ const Capsule = () => {
       <div className="h-full w-full justify-center items-center flex">
         {!loading && remainingTime > 0 ? (
           <div className="relative">
-            <img src="/src/assets/capsule.png" height={500} width={900} />
+            <img src={capusle} height={500} width={900} />
             <div
               className="text-5xl absolute bg-gray-950 font-bold"
               style={{
