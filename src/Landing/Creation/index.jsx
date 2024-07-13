@@ -127,7 +127,9 @@ const Creation = () => {
                 <ModalFooter>
                   <Button
                     className="text-3xl mr-10"
-                    onClick={() => navigator.clipboard.writeText(url)}
+                    onClick={() =>
+                      navigator.clipboard.writeText(location.host + url)
+                    }
                   >
                     <div className="text-3xl">Copy</div>
                   </Button>
