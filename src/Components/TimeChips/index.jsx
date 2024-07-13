@@ -3,6 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const timeOptions = [
+  {label:'2 min', value:180}
   { label: "5 min", value: 300 },
   { label: "1 hr", value: 3600 },
   { label: "1 day", value: 86400 },
