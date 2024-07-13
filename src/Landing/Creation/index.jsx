@@ -21,11 +21,11 @@ const Creation = () => {
   const [preview, setPreview] = useState(null);
   const [message, setMessage] = useState("");
   const [image, setImage] = useState(null);
-  const [selectedTime, setSelectedTime] = useState(60);
+  const [selectedTime, setSelectedTime] = useState(300);
   const [customDate, setCustomDate] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [url, setUrl] = useState("afdsfdsas");
+  const [url, setUrl] = useState(null);
 
   const onDrop = useCallback(
     (acceptedFiles) => {
@@ -66,12 +66,12 @@ const Creation = () => {
                   : new Date().getTime() + selectedTime * 1000,
             })
               .then((response) => {
-                setUrl(location.host + "/capsule" + id);
+                setUrl("/capsule/" + id);
                 setIsLoading(false);
                 setImage(false);
                 setCustomDate(false);
                 setMessage("");
-                setSelectedTime(60);
+                setSelectedTime(300);
                 setPreview(null);
               })
               .catch((error) => {
@@ -125,11 +125,14 @@ const Creation = () => {
                   </div>
                 </ModalBody>
                 <ModalFooter>
-                  <Button onClick={() => navigator.clipboard.writeText(url)}>
-                    Copy
+                  <Button
+                    className="text-3xl mr-10"
+                    onClick={() => navigator.clipboard.writeText(url)}
+                  >
+                    <div className="text-3xl">Copy</div>
                   </Button>
                   <Button onClick={() => window.open(url, "_self")}>
-                    visit
+                    <div className="text-3xl"> visit</div>
                   </Button>
                 </ModalFooter>
               </>
